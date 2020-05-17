@@ -1,19 +1,17 @@
 Package.describe({
-  name: 'nitrolabs:cdn',
-  version: '1.3.0',
+  name: 'optune:meteor-cdn',
+  version: '1.3.1',
   summary: 'Serve Meteor content from a CDN',
-  git: 'https://github.com/nitrolabs/meteor-cdn',
+  git: 'https://github.com/optune/meteor-cdn',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.4');
+  api.versionsFrom('1.8');
   api.export('CDN','server');
   api.export('CDN','client');
   api.use('webapp','server');
-  api.use('templating','client');
   api.use('browser-policy', {weak: true});
-  api.addFiles('lib/template.js','client');
   api.addFiles('lib/client.js','client');
   api.addFiles('lib/server.js','server');
 });
